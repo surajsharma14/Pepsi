@@ -452,3 +452,15 @@ html, body{
         top:-100px
     }
 }
+
+.other_product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.other_product img{
+    height: 241px;
+    width: 252px;
+    box-shadow: #333;
+}
