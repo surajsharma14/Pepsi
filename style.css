@@ -201,6 +201,10 @@ html, body{
     margin-right: 12px;
 }
 
+#cart-btn:hover {
+background-color: #3498db;
+}
+
 #wish{
     position: absolute;
     margin-top: 100px;
@@ -452,3 +456,5 @@ html, body{
         top:-100px
     }
 }
+
+
