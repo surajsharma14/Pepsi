@@ -452,3 +452,38 @@ html, body{
         top:-100px
     }
 }
+
+#cart:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  #cart-number {
+    position: absolute;
+    top: -30%;
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    transition: background-color 0.3s;
+  }
+  
+  #cart:hover #cart-number {
+    background-color: #2BAE68;
+  }
+  
+  #cart:hover i {
+    color: #2BAE68;
+  }
+  
+  #cart:hover #cart-number h6 {
+    color: #fff;
+  }
+  
