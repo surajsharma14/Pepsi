@@ -1,0 +1,76 @@
+// this is a really simple and well konwn game called TIC TAC TOEs code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 5px;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 36px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board" id="board"></div>
+    <script>
+        const board = document.getElementById('board');
+        let currentPlayer = 'X';
+        let cells = Array(9).fill('');
+
+        function handleCellClick(index) {
+            if (cells[index] === '' && !checkWinner()) {
+                cells[index] = currentPlayer;
+                renderBoard();
+                currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+            }
+        }
+
+        function checkWinner() {
+            const winPatterns = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                [0, 4, 8], [2, 4, 6] // Diagonals
+            ];
+
+            for (let pattern of winPatterns) {
+                const [a, b, c] = pattern;
+                if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+                    alert(`Player ${cells[a]} wins!`);
+                    return true;
+                }
+            }
+
+            if (cells.every(cell => cell !== '')) {
+                alert("It's a draw!");
+                return true;
+            }
+
+            return false;
+        }
+
+        function renderBoard() {
+            board.innerHTML = '';
+            cells.forEach((cell, index) => {
+                const cellElement = document.createElement('div');
+                cellElement.classList.add('cell');
+                cellElement.textContent = cell;
+                cellElement.addEventListener('click', () => handleCellClick(index));
+                board.appendChild(cellElement);
+            });
+        }
+
+        renderBoard();
+    </script>
+</body>
+</html>
