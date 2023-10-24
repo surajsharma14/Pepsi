@@ -92,6 +92,15 @@ html, body{
 
 #cart{
     position: relative;
+    
+}
+
+#cart:hover{
+    color:#2BAE68;
+}
+
+.ri-heart-line:hover{
+    color:#2BAE68;
 }
 
 #cart-number{
