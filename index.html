@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>Pepsi</title>
 </head>
+
 <body>
     <div id="main">
         <div id="nav">
@@ -16,6 +27,8 @@
                 <a href="#">Category</a>
                 <a href="#">Lifestyle</a>
                 <a href="#contact-us">Contact Us</a>
+                <a href="#testimonials">Users</a>
+                <a href="#gallery">Users</a>
                 <a href="#">Books</a>
             </div>
             <div id="nav-center">
@@ -35,27 +48,38 @@
             </div>
         </div>
     </div>
-    <div id="hero">
+    <div id="hero" class="container">
         <div id="left-hero">
-            <h1>Freshness</h1>
-            <h1>start's</h1>
-            <div id="here">
-                <h1>here</h1>
-                <div id="energy">
-                    <i class="ri-flashlight-line"></i>
+            <div class="offer">
+                <h1>Freshness</h1>
+                <h1>start's</h1>
+                <div id="here">
+                    <h1>here</h1>
+                    <div id="energy">
+                        <i class="ri-flashlight-line"></i>
+                    </div>
                 </div>
-            </div>
-            <h2>$9.99</h2>
-            <p>Fresh, tangy and tasty cold drink <br>with refreshing minty notes</p>
-            <div id="add-to-cart">
-                <div id="cart-btn">
-                    <i class="ri-shopping-bag-line"></i>
-                    <h3>Add to cart</h3>
+                <h2>$9.99</h2>
+                <p>Fresh, tangy and tasty cold drink <br>with refreshing minty notes</p>
+                <div id="add-to-cart">
+                    <div id="cart-btn">
+                        <i class="ri-shopping-bag-line"></i>
+                        <h3>Add to cart</h3>
+                    </div>
+                    <i id="wish" class="ri-heart-line"></i>
                 </div>
-                <i id="wish" class="ri-heart-line"></i>
+                <img id="imgone" src="Path 1.png" alt="pic">
+                <i id="right-arrow" class="ri-arrow-right-line"></i>
             </div>
-            <img id="imgone" src="Path 1.png" alt="pic">
-            <i id="right-arrow" class="ri-arrow-right-line"></i>
+            <div id="special-offers">
+                <h2>Special Offers</h2>
+                <p>Check out our special offers on Pepsi products!</p>
+                <ul>
+                    <li>Buy 1 Get 1 Free</li>
+                    <li>25% off on 2nd purchase</li>
+                    <li>Combo offers available</li>
+                </ul>
+            </div>
         </div>
         <div id="center-hero">
             <div id="can-back">
@@ -94,10 +118,10 @@
                 <h1>Description</h1>
                 <i class="ri-add-line"></i>
             </div>
-            <p>A carbonated soft drink manufactured by PepsiCo. Originally 
-                created and developed in 1893 by Caleb Bradham and introduced 
-                as Brad's Drink, it was renamed as Pepsi-Cola in 1898, and 
-                then shortened to Pepsi in 1961. In 2022, it was the second 
+            <p>A carbonated soft drink manufactured by PepsiCo. Originally
+                created and developed in 1893 by Caleb Bradham and introduced
+                as Brad's Drink, it was renamed as Pepsi-Cola in 1898, and
+                then shortened to Pepsi in 1961. In 2022, it was the second
                 most valuable soft drink brand worldwide, behind Coca-Cola.</p>
             <hr>
             <div class="expand">
@@ -110,58 +134,142 @@
                 <h1 id="int">Ingredients</h1>
                 <i class="ri-subtract-line"></i>
             </div>
-            <p>Carbonated Water, Sugar, Colour (Caramel E150d), 
-                Acid (Phosphoric Acid), Flavourings (including Caffeine), 
+            <p>Carbonated Water, Sugar, Colour (Caramel E150d),
+                Acid (Phosphoric Acid), Flavourings (including Caffeine),
                 Sweeteners (Acesulfame K, Sucralose).</p>
         </div>
     </div>
+    
 
-    <div id="special-offers">
-        <h2>Special Offers</h2>
-        <p>Check out our special offers on Pepsi products!</p>
-        <ul>
-            <li>Buy 1 Get 1 Free</li>
-            <li>25% off on 2nd purchase</li>
-            <li>Combo offers available</li>
-        </ul>
-    </div>
- <div class="contact">
-    <section id="contact-us">
-        <div class="contact-con">           <h2 id="ch2">Contact Us</h2>
-            <p>If you have any questions or feedback, feel free to get in touch with us.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
+    <div class="contact">
+        <section id="contact-us">
+            <div class="contact-con">
+                <h2 id="ch2">Contact Us</h2>
+                <p>If you have any questions or feedback, feel free to get in touch with us.</p>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
-                <input type="submit" value="Submit">
-            </form>
-        </div> 
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </section>
     </div>
 
     <!-- Testimonials Section -->
-    <div id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial">
-            <div class="testimonial-author">
-                <img src="user1.jpg" alt="User 1">
-                <h3>John Doe</h3>
+    <section id="testimonials">
+        <div class="container ">
+            <h1 class="text-center">Meet Our users</h1>
+            <p class="text-center space-b"><small>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</small></p>
+            <div class="row">
+                <div data-aos="fade-right" data-aos-delay="100" class="col-md-4 ">
+                    <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempora eveniet
+                        ipsum hic ex ea repellat ullam. Placeat, asperiores unde. <br> <i
+                            class="fa fa-solid fa-twitter"></i><span>@username</span></p>
+                    <img src="images/user1.jpg" alt="">
+                </div>
+                <div data-aos="fade-down" class="col-md-4 middle ">
+                    <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempora eveniet
+                        ipsum hic ex ea repellat ullam. Placeat, asperiores unde. <br> <i
+                            class="fa fa-solid fa-twitter"></i><span>@username</span></p>
+                    <img src="images/user2.jpg" alt="">
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100" class="col-md-4 ">
+                    <p class="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempora eveniet
+                        ipsum hic ex ea repellat ullam. Placeat, asperiores unde. <br> <i
+                            class="fa fa-solid fa-twitter"></i><span>@username</span></p>
+                    <img src="images/user3.jpg" alt="">
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor velit vel justo euismod, in dignissim libero posuere. Proin vitae ullamcorper nulla. Nulla facilisi.</p>
         </div>
-        <div class="testimonial">
-            <div class="testimonial-author">
-                <img src="user2.jpg" alt="User 2">
-                <h3>Jane Smith</h3>
+    </section>
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <h1 class="text-center">Gallery</h1>
+            <p class="text-center space-b"><small>Explore images related to Pepsi.</small></p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/image1.jpg" class="galimg" alt="Pepsi Image 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/image2.jpg" class="galimg" alt="Pepsi Image 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/image3.jpg" class="galimg" alt="Pepsi Image 3">
+                </div>
             </div>
-            <p>Integer nec libero nec nisi bibendum rhoncus vel in felis. Nulla facilisi. Aenean suscipit sapien eu feugiat venenatis.</p>
         </div>
-    </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h1 class="text-center">Frequently Asked Questions</h1>
+            <p class="text-center space-b"><small>Find answers to common questions about Pepsi.</small></p>
+            <div class="accordion" id="faqAccordion">
+
+                <!-- FAQ item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                            Question 1: What are the different Pepsi flavors available?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Answer 1: Pepsi offers a variety of flavors including Original, Diet Pepsi, Pepsi Zero Sugar, and more.
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FAQ item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            Question 2: Can I purchase Pepsi products online?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Answer 2: Yes, you can purchase Pepsi products online through our official website or authorized retailers.
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Add more FAQ items as needed -->
+                
+                <!-- FAQ item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            Question 3: Are Pepsi products suitable for a vegetarian diet?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Answer 3: Yes, Pepsi products are suitable for a vegetarian diet. They do not contain any non-vegetarian ingredients.
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Add more FAQ items as needed -->
+            
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
