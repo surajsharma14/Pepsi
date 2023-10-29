@@ -1,0 +1,83 @@
+let currentPlayer = 'X';
+let board = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', '']
+];
+
+function makeMove(row, col) {
+    if (board[row][col] === '' && !isGameOver()) {
+        board[row][col] = currentPlayer;
+        document.getElementById('message').textContent = `Player ${currentPlayer}'s turn`;
+        document.getElementById('message').style.color = 'black';
+        document.getElementById('message').style.backgroundColor = 'white';
+        document.getElementById('message').style.display = 'block';
+
+        document.getElementById('tic-tac-toe').rows[row].cells[col].textContent = currentPlayer;
+        
+        if (isGameOver()) {
+            document.getElementById('message').textContent = `Player ${currentPlayer} wins!`;
+            document.getElementById('message').style.color = 'white';
+            document.getElementById('message').style.backgroundColor = 'green';
+        } else if (boardIsFull()) {
+            document.getElementById('message').textContent = 'It\'s a draw!';
+            document.getElementById('message').style.color = 'white';
+            document.getElementById('message').style.backgroundColor = 'gray';
+        } else {
+            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+        }
+    }
+}
+
+function isGameOver() {
+    return checkRows() || checkCols() || checkDiagonals();
+}
+
+function checkRows() {
+    for (let i = 0; i < 3; i++) {
+        if (board[i][0] !== '' && board[i][0] === board[i][1] && board[i][0] === board[i][2]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkCols() {
+    for (let i = 0; i < 3; i++) {
+        if (board[0][i] !== '' && board[0][i] === board[1][i] && board[0][i] === board[2][i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkDiagonals() {
+    return (board[0][0] !== '' && board[0][0] === board[1][1] && board[0][0] === board[2][2]) ||
+           (board[0][2] !== '' && board[0][2] === board[1][1] && board[0][2] === board[2][0]);
+}
+
+function boardIsFull() {
+    for (let row of board) {
+        if (row.includes('')) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function resetGame() {
+    currentPlayer = 'X';
+    board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ];
+
+    document.getElementById('message').style.display = 'none';
+
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            document.getElementById('tic-tac-toe').rows[i].cells[j].textContent = '';
+        }
+    }
+}
