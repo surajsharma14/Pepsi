@@ -38,15 +38,19 @@ html, body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: "product sans";
+    font-family: "product san";
     font-weight: 500;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
 }
 
-#nav-left a:hover{
+#nav-left a:hover {
     color: #2BAE68;
+    transform: scale(1.05);
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
+
 
 #nav-center{
     width: calc(100%/3);
@@ -197,16 +201,25 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 50px;
+    width: 140px;
+    height: 44px;
     border-radius: 50px;
     background-color: rgb(0, 0, 0);
     color: #fff;
+    transition: all 0.5s ease;
+}
+
+#cart-btn:hover {
+    width: 144px;
+    height: 47px;
+    background-color: #2BAE68;
+
 }
 
 #cart-btn h3{
     font-family: "product sans";
     font-size: 12px;
+    padding-top: 5px;
 }
 
 #cart-btn i{
@@ -220,10 +233,11 @@ html, body{
 }
 
 #imgone{
-    top: 33%;
-    transform: rotate(5deg);
+    top: 25%;
+    transform: rotate(7deg);
     width: 270px;
     position: absolute;
+    left: 95px;
 }
 
 #right-arrow{
@@ -430,7 +444,7 @@ html, body{
 }
 
 #expand-one{
-    margin-top: 200px;
+    margin-top: 20px;
 }
 
 #int{
@@ -521,12 +535,12 @@ html, body{
   input[type="submit"] {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 26px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     transition: background-color 0.3s;
   }
   
@@ -555,6 +569,11 @@ html, body{
     padding: 10px 10px 10px 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.review:hover {
+    background-color: #a9c1b4;
 }
 .review .fa-twitter{
     color: #013f7e;
@@ -582,7 +601,7 @@ html, body{
     margin-bottom: 3rem;
 }
 .offer{
-    margin-bottom: 5rem;
+    margin-bottom: 12rem;
 }
 /* Gallery Section Styles */
 #gallery {
